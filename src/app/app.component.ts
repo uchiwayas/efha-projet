@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,12 @@ export class AppComponent {
   typeContraste = 'Mode contraste haut';
   pageName = 'index';
 
+  public constructor(private titleService: Title, private router: Router) {
+    router.events.subscribe((val) => {
+      this.pageName = router.url;
+    });
+  }
+
   changeContrast(): any {
     this.highContrast = !this.highContrast;
 
@@ -22,9 +30,6 @@ export class AppComponent {
       this.overlayTypeGeneral = 'overlay-light';
       this.typeContraste = 'Mode contraste haut';
     }
-  }
-
-  changePage(nb: number) {
-    this.pageName = nb;
+    console.log(this.pageName);
   }
 }

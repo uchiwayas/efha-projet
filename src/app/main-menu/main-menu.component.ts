@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
@@ -9,9 +11,16 @@ export class MainMenuComponent implements OnInit {
 
   @Input() overlayType;
 
-  constructor() { }
+  public constructor(private titleService: Title, router: Router) {
+    //console.log(router.url);
+  }
 
   ngOnInit() {
+    this.setTitle('Game-Access');
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
 }
