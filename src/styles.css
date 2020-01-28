@@ -39,13 +39,14 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-#evitement {
+.evitement {
   position: absolute;
   left: -99999999rem;
 }
 
-#evitement:focus {
+.evitement:focus {
   position: static;
+  color: #dee2e6;
 }
 
 blockquote {

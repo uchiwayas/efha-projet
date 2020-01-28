@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +7,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'efha-projet';
-
   highContrast = false;
-  overlayType = 'overlay-light';
+  overlayTypeGeneral = 'overlay-light';
   typeContraste = 'Mode contraste haut';
+  pageNb = 0;
 
   changeContrast(): any {
     this.highContrast = !this.highContrast;
 
     if (this.highContrast) {
-      this.overlayType = 'overlay-dark';
+      this.overlayTypeGeneral = 'overlay-dark';
       this.typeContraste = 'Mode contraste bas';
     } else {
-      this.overlayType = 'overlay-light';
+      this.overlayTypeGeneral = 'overlay-light';
       this.typeContraste = 'Mode contraste haut';
     }
+  }
+
+  changePage(nb: number) {
+    this.pageNb = nb;
+  }
+
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
 }

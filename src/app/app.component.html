@@ -1,37 +1,69 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a id="evitement" href="#main"> Aller au contenu </a>
+    <button class="evitement btn btn-light" (click)="scrollToElement(main)"> Aller au contenu </button>
+    <button class="evitement btn btn-light" (click)="scrollToElement(footer)"> Aller au footer </button>
     <a class="navbar-brand" href="index.html">Game-Access</a>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Accueil</a>
+          <a class="nav-link" [routerLink]="['/index']" (click)="changePage(0)">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Option 1</a>
+          <a class="nav-link" [routerLink]="['/page1']" (click)="changePage(1)">Option 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Option 2</a>
+          <a class="nav-link" [routerLink]="['/page2']" (click)="changePage(2)">Option 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Option 3</a>
+          <a class="nav-link" [routerLink]="['/page3']" (click)="changePage(3)">Option 3</a>
         </li>
       </ul>
+      <button class="btn btn-light" (click)="changeContrast()"><i class="fa fa-adjust"></i></button>
+
     </div>
   </div>
 </nav>
 
-<app-main-menu [overlayType]="overlayType"></app-main-menu>
+<!-- Page Header -->
+<header class="masthead" style="background: #212529">
+  <div *ngIf="pageNb === 0" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/0.jpg')"></div>
+  <div *ngIf="pageNb === 1" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/1.jpg')"></div>
+  <div *ngIf="pageNb === 2" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/2.jpg')"></div>
+  <div *ngIf="pageNb === 3" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/3.jpg')"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div *ngIf="pageNb === 0" class="site-heading">
+          <h1>Accessibilité dans les jeux vidéo</h1>
+          <span class="subheading">TAHRI Yassine & ANGELINA Sacha</span>
+        </div>
+        <div *ngIf="pageNb === 1" class="site-heading">
+          <h1>Page 1</h1>
+        </div>
+        <div *ngIf="pageNb === 2" class="site-heading">
+          <h1>Page 2</h1>
+        </div>
+        <div *ngIf="pageNb === 3" class="site-heading">
+          <h1>Page 3</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<a #main id="main" tabindex="-1"></a>
+<router-outlet></router-outlet>
 
 <!-- Footer -->
+<a #footer id="footer" tabindex="-1"></a>
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="clearfix">
-          <a class="btn btn-dark float-right" (click)="changeContrast()" href="#">{{typeContraste}}</a>
+          <button class="btn btn-dark float-right" (click)="changeContrast()">{{typeContraste}}</button>
         </div>
       </div>
     </div>
