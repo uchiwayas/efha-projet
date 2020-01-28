@@ -10,7 +10,7 @@ export class AppComponent {
   highContrast = false;
   overlayTypeGeneral = 'overlay-light';
   typeContraste = 'Mode contraste haut';
-  pageNb = 0;
+  pageName = 'index';
 
   changeContrast(): any {
     this.highContrast = !this.highContrast;
@@ -25,11 +25,6 @@ export class AppComponent {
   }
 
   changePage(nb: number) {
-    this.pageNb = nb;
-  }
-
-  scrollToElement($element): void {
-    console.log($element);
-    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    this.pageName = nb;
   }
 }
