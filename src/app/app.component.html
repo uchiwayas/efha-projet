@@ -1,49 +1,39 @@
-<form method="post" action="/">
-  <h1>Contact</h1>
-  <p><small>Les champs obligatoires sont marqués par *</small></p>
-  <!-- Civilité -->
-  <fieldset>
-    <legend>Civilité</legend>
-    <ul>
-      <li>
-        <input type="radio" name="civilite" id="civilite1" value="Mme" />
-        <label for="civilite1">Mme</label>
-      </li>
-      <li>
-        <input type="radio" name="civilite" id="civilite2" value="M." />
-        <label for="civilite2">M.</label>
-      </li>
-      <li>
-        <input type="radio" name="civilite" id="civilite3" value="Autre" />
-        <label for="civilite3">Autre</label>
-      </li>
-    </ul>
-  </fieldset>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a id="evitement" href="#main"> Aller au contenu </a>
+    <a class="navbar-brand" href="index.html">Game-Access</a>
 
-  <!-- Nom -->
-  <label for="nom" >
-    Nom *
-    <input type="text" id="nom" name="nom" required="required" />
-    <span id="erreurNom" style="color:red;">Veuillez renseigner votre nom</span>
-  </label>
-  <br />
-  <!-- Age -->
-  <label for="age">Âge</label>
-  <select name="age" id="age">
-    <option value="18">18</option>
-    <option value="19">19</option>
-    <option value="20">20</option>
-    <option value="21">21</option>
-  </select>
-  <br />
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Option 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Option 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Option 3</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <!-- Date -->
-  <label for="date">
-    Date
-    <input type="text" name="date" id="date" value="24/01/2020" aria-describedby="helpDate erreurDate" aria-invalid="true" />
-  </label>
-  <small id="helpDate">Format : JJ/MM/AAAA</small>
-  <p id="erreurDate">Le format de date renseigné est invalide. (format attendu : JJ/MM/AAAA)</p>
-  <br />
-  <input type="submit" value="Envoyer"/>
-</form>
+<app-main-menu [overlayType]="overlayType"></app-main-menu>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="clearfix">
+          <a class="btn btn-dark float-right" (click)="changeContrast()" href="#">{{typeContraste}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
