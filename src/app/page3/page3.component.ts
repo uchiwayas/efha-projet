@@ -13,7 +13,7 @@ export class Page3Component implements OnInit {
   }
 
   ngOnInit() {
-    this.setTitle('Page 3 - Game-Access');
+    this.setTitle('Contact - Game-Access');
   }
 
   public setTitle( newTitle: string) {

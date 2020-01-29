@@ -1,4 +1,5 @@
 <!-- Navigation -->
+<header id="h" class="masthead" style="background: #212529" role="banner">
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
     <a class="evitement btn btn-light" href="{{getPageName()}}#main"> Aller au contenu </a>
@@ -10,7 +11,7 @@
 
         <!-- INDEX -->
         <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/index']" style="border-width: 0.1rem !important;">Accueil</a>
+          <a class="nav-link border border-light rounded" [routerLink]="['/index#h']" style="border-width: 0.1rem !important;">Accueil</a>
         </li>
         <ng-template #elseBlock0>
           <li class="nav-item">
@@ -40,29 +41,28 @@
 
         <!-- PAGE 3 -->
         <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/page3']" style="border-width: 0.1rem !important;">Page 3</a>
+          <a class="nav-link border border-light rounded" [routerLink]="['/page3']" style="border-width: 0.1rem !important;">Contact</a>
         </li>
         <ng-template #elseBlock3>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/page3']">Page 3</a>
+            <a class="nav-link" [routerLink]="['/page3']">Contact</a>
           </li>
         </ng-template>
       </ul>
-      <button aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light" (click)="changeContrast()"><i class="fa fa-adjust"></i></button>
+      <button aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light" (click)="changeContrast()" style="margin-left: 1rem"><em class="fa fa-adjust"></em></button>
 
     </div>
   </div>
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background: #212529">
-  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/0.jpg')"></div>
+  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/0.jpg'); background-repeat: no-repeat;"></div>
 
-  <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/1.jpg')"></div>
+  <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/1.jpg'); background-repeat: no-repeat;"></div>
 
-  <div *ngIf="checkPage('page2')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/2.jpg')"></div>
+  <div *ngIf="checkPage('page2')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/2.jpg'); background-repeat: no-repeat;"></div>
 
-  <div *ngIf="checkPage('page3')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/3.jpg')"></div>
+  <div *ngIf="checkPage('page3')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/3.jpg'); background-repeat: no-repeat;"></div>
 
   <div class="container">
     <div class="row">
@@ -83,7 +83,7 @@
         </div>
 
         <div *ngIf="checkPage('page3')" class="site-heading">
-          <h1>Page 3</h1>
+          <h1>Contact</h1>
         </div>
 
       </div>
@@ -92,11 +92,13 @@
 </header>
 
 <a id="main" tabindex="-1"></a>
-<router-outlet></router-outlet>
+<div role="main">
+  <router-outlet></router-outlet>
+</div>
 
 <!-- Footer -->
 <a id="footer" tabindex="-1"></a>
-<footer>
+<footer role="contentinfo">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">

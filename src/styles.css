@@ -36,7 +36,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #0085A1;
+  color: #0175E4;
 }
 
 .evitement {
@@ -47,11 +47,12 @@ a:focus, a:hover {
 .evitement:focus {
   position: static;
   color: #dee2e6;
+  font-weight: bold;
 }
 
 blockquote {
   font-style: italic;
-  color: #868e96;
+  color: #6E7881;
 }
 
 .section-heading {
@@ -73,13 +74,13 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: #0175E4;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: #0175E4;
   text-shadow: none;
 }
 
@@ -163,13 +164,13 @@ img::-moz-selection {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-    color: #0085A1;
+    color: #0175E4;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
+    color: #0175E4;
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -180,7 +181,7 @@ img::-moz-selection {
 header.masthead {
   margin-bottom: 3.125rem;
   background: no-repeat center center;
-  background-color: #868e96;
+  background-color: #6E7881;
   background-attachment: scroll;
   position: relative;
   background-size: cover;
@@ -280,7 +281,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0085A1;
+  color: #0175E4;
 }
 
 .post-preview > a > .post-title {
@@ -298,7 +299,7 @@ header.masthead .post-heading .meta a {
   font-size: 1.125rem;
   font-style: italic;
   margin-top: 0;
-  color: #868e96;
+  color: #6E7881;
 }
 
 .post-preview > .post-meta > a {
@@ -308,7 +309,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
   text-decoration: underline;
-  color: #0085A1;
+  color: #0175E4;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -341,7 +342,7 @@ header.masthead .post-heading .meta a {
 
 .floating-label-form-group input::-webkit-input-placeholder,
 .floating-label-form-group textarea::-webkit-input-placeholder {
-  color: #868e96;
+  color: #6E7881;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
@@ -369,7 +370,7 @@ header.masthead .post-heading .meta a {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #0085A1;
+  color: #0175E4;
 }
 
 form .form-group:first-child .floating-label-form-group {
@@ -402,8 +403,8 @@ footer .copyright {
 }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+  background-color: #0175E4;
+  border-color: #0175E4;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -430,5 +431,5 @@ footer .copyright {
 }
 
 .nav-link {
-  border-width:20px !important;
+  margin: 0.15rem;
 }
