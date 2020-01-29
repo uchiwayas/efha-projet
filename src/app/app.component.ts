@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'efha-projet';
   highContrast = false;
   overlayTypeGeneral = 'overlay-light';
-  typeContraste = 'Mode contraste haut';
+  typeContraste: string = 'Mode contraste haut';
   pageName = 'index';
 
   public constructor(private titleService: Title, private router: Router) {
@@ -31,5 +31,17 @@ export class AppComponent {
       this.typeContraste = 'Mode contraste haut';
     }
     console.log(this.pageName);
+  }
+
+  getPageName(): string {
+    const fullName = this.pageName.split('#');
+    console.log(fullName[0]);
+    return fullName[0];
+  }
+
+  checkPage(page) {
+    return (this.pageName === '/' + page ||
+            this.pageName === '/' + page + '#main' ||
+            this.pageName === '/' + page + '#footer');
   }
 }

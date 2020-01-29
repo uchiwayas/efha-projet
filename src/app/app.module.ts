@@ -17,7 +17,7 @@ import { Page1Component } from './page1/page1.component';
     BrowserModule,
     FontAwesomeModule,
     RouterModule.forRoot([
-      { path: '', component: MainMenuComponent },
+      { path: '', redirectTo: '/index', pathMatch: 'full'},
       { path: 'index', component: MainMenuComponent },
       { path: 'page1', component: Page1Component }
     ])
