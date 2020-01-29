@@ -7,18 +7,46 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/index']">Accueil</a>
+
+        <!-- INDEX -->
+        <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
+          <a class="nav-link border border-light rounded" [routerLink]="['/index']" style="border-width: 0.1rem !important;">Accueil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/page1']">Option 1</a>
+        <ng-template #elseBlock0>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/index']">Accueil</a>
+          </li>
+        </ng-template>
+
+        <!-- PAGE 1 -->
+        <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
+          <a class="nav-link border border-light rounded" [routerLink]="['/page1']" style="border-width: 0.1rem !important;">Page 1</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/page2']">Option 2</a>
+        <ng-template #elseBlock1>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/page1']">Page 1</a>
+          </li>
+        </ng-template>
+
+        <!-- PAGE 2 -->
+        <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
+          <a class="nav-link border border-light rounded" [routerLink]="['/page2']" style="border-width: 0.1rem !important;">Page 2</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/page3']">Option 3</a>
+        <ng-template #elseBlock2>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/page2']">Page 2</a>
+          </li>
+        </ng-template>
+
+        <!-- PAGE 3 -->
+        <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
+          <a class="nav-link border border-light rounded" [routerLink]="['/page3']" style="border-width: 0.1rem !important;">Page 3</a>
         </li>
+        <ng-template #elseBlock3>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/page3']">Page 3</a>
+          </li>
+        </ng-template>
       </ul>
       <button aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light" (click)="changeContrast()"><i class="fa fa-adjust"></i></button>
 
