@@ -1,5 +1,14 @@
 <!-- Main Content -->
 <div class="container">
+<nav aria-label="fil d'ariane">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/index" class="lien">Accueil</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
   <form #formulaire="ngForm" (ngSubmit)="onSubmit()">
     <p><small>Les champs obligatoires sont marqués par *</small></p>
     <!-- Civilité -->
@@ -55,5 +64,6 @@
     <br/><span *ngIf="showSubmit" id="submitok" style="color:#058e00;">Vote message a été envoyé</span>
   </form>
 </div>
-
+</div>
+</div>
 <hr>

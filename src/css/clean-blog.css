@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 /*!
  * Start Bootstrap - Clean Blog v5.0.8 (https://startbootstrap.com/template-overviews/clean-blog)
  * Copyright 2013-2019 Start Bootstrap
@@ -6,14 +5,14 @@
  */
 
 body {
-  font-size: 1.25rem;
+  font-size: 20px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
 p {
   line-height: 1.5;
-  margin: 1.875rem 0;
+  margin: 30px 0;
 }
 
 p a {
@@ -36,51 +35,40 @@ a {
 }
 
 a:focus, a:hover {
-  color: #0168CB;
-}
-
-.evitement {
-  position: absolute;
-  left: -99999999rem;
-}
-
-.evitement:focus {
-  position: static;
-  color: #dee2e6;
-  font-weight: bold;
+  color: #0085A1;
 }
 
 blockquote {
   font-style: italic;
-  color: #6E7881;
+  color: #868e96;
 }
 
 .section-heading {
-  font-size: 2.25rem;
+  font-size: 36px;
   font-weight: 700;
-  margin-top: 3.75rem;
+  margin-top: 60px;
 }
 
 .caption {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-style: italic;
   display: block;
   margin: 0;
-  padding: 0.625rem;
+  padding: 10px;
   text-align: center;
-  border-bottom-right-radius: 0.3125rem;
-  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #0175E4;
+  background: #0085A1;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0175E4;
+  background: #0085A1;
   text-shadow: none;
 }
 
@@ -101,6 +89,8 @@ img::-moz-selection {
 
 #mainNav {
   position: absolute;
+  border-bottom: 1px solid #e9ecef;
+  background-color: white;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -110,64 +100,67 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 800;
-  padding: 0.8125rem;
+  padding: 13px;
   text-transform: uppercase;
   color: #343a40;
 }
 
 #mainNav .navbar-nav > li.nav-item > a {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 992px) {
   #mainNav {
-    border-bottom: 0.0625rem solid transparent;
+    border-bottom: 1px solid transparent;
     background: transparent;
   }
-
   #mainNav .navbar-brand {
-    padding: 0.625rem 1.25rem;
+    padding: 10px 20px;
     color: #fff;
   }
-
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
   #mainNav .navbar-nav > li.nav-item > a {
-    padding: 0.625rem 1.25rem;
+    padding: 10px 20px;
     color: #fff;
   }
-
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
+}
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 992px) {
   #mainNav {
     transition: background-color 0.2s;
     /* Force Hardware Acceleration in WebKit */
     transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
   }
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -4.1875rem;
+    top: -67px;
     transition: transform 0.2s;
-    border-bottom: 0.0625rem solid white;
+    border-bottom: 1px solid white;
     background-color: rgba(255, 255, 255, 0.9);
   }
   #mainNav.is-fixed .navbar-brand {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-    color: #0175E4;
+    color: #0085A1;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0175E4;
+    color: #0085A1;
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -176,9 +169,9 @@ img::-moz-selection {
 }
 
 header.masthead {
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
   background: no-repeat center center;
-  background-color: #6E7881;
+  background-color: #868e96;
   background-attachment: scroll;
   position: relative;
   background-size: cover;
@@ -197,14 +190,16 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 12.5rem 0 9.375rem;
+  padding: 200px 0 150px;
   color: white;
 }
 
-header.masthead .page-heading,
-header.masthead .post-heading,
-header.masthead .site-heading {
-  padding: 12.5rem 0;
+@media only screen and (min-width: 768px) {
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 200px 0;
+  }
 }
 
 header.masthead .page-heading,
@@ -214,29 +209,29 @@ header.masthead .site-heading {
 
 header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
-  font-size: 3.125rem;
+  font-size: 50px;
   margin-top: 0;
 }
 
 header.masthead .page-heading .subheading,
 header.masthead .site-heading .subheading {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.1;
   display: block;
-  margin: 0.625rem 0 0;
+  margin: 10px 0 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 5rem;
+    font-size: 80px;
   }
 }
 
 header.masthead .post-heading h1 {
-  font-size: 2.1875rem;
+  font-size: 35px;
 }
 
 header.masthead .post-heading .meta,
@@ -246,14 +241,14 @@ header.masthead .post-heading .subheading {
 }
 
 header.masthead .post-heading .subheading {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 600;
-  margin: 0.625rem 0 1.875rem;
+  margin: 10px 0 30px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .post-heading .meta {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
   font-family: 'Lora', 'Times New Roman', serif;
@@ -263,12 +258,12 @@ header.masthead .post-heading .meta a {
   color: #fff;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
   header.masthead .post-heading h1 {
-    font-size: 3.4375rem;
+    font-size: 55px;
   }
   header.masthead .post-heading .subheading {
-    font-size: 1.875rem;
+    font-size: 30px;
   }
 }
 
@@ -278,59 +273,49 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0175E4;
+  color: #0085A1;
 }
 
 .post-preview > a > .post-title {
-  font-size: 1.875rem;
-  margin-top: 1.875rem;
-  margin-bottom: 0.625rem;
-  color: #0056b3;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-.post-preview > a > .post-title:hover {
-  color: #0175E4;
-  text-decoration: underline !important;
-}
-
-
-.post-preview > .post-subtitle {
-  font-weight: 500;
-  margin: 0 0 0.625rem;
+.post-preview > a > .post-subtitle {
+  font-weight: 300;
+  margin: 0 0 10px;
 }
 
 .post-preview > .post-meta {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-style: italic;
   margin-top: 0;
-  color: #6E7881;
+  color: #868e96;
 }
 
 .post-preview > .post-meta > a {
-  font-size: 1.125rem;
-  font-style: italic;
-  margin-top: 0;
-  color: #6E7881;
-  text-decoration: underline !important;
+  text-decoration: none;
+  color: #212529;
 }
 
 .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
   text-decoration: underline;
-  color: #0175E4;
+  color: #0085A1;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 }
 
 .floating-label-form-group {
-  font-size: 0.875rem;
+  font-size: 14px;
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border-bottom: 0.0625rem solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .floating-label-form-group input,
@@ -349,7 +334,7 @@ header.masthead .post-heading .meta a {
 
 .floating-label-form-group input::-webkit-input-placeholder,
 .floating-label-form-group textarea::-webkit-input-placeholder {
-  color: #6E7881;
+  color: #868e96;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
@@ -368,7 +353,7 @@ header.masthead .post-heading .meta a {
 }
 
 .floating-label-form-group .help-block {
-  margin: 0.9375rem 0;
+  margin: 15px 0;
 }
 
 .floating-label-form-group-with-value label {
@@ -377,15 +362,15 @@ header.masthead .post-heading .meta a {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #0175E4;
+  color: #0085A1;
 }
 
 form .form-group:first-child .floating-label-form-group {
-  border-top: 0.0625rem solid #dee2e6;
+  border-top: 1px solid #dee2e6;
 }
 
 footer {
-  padding: 3.125rem 0 4.0625rem;
+  padding: 50px 0 65px;
 }
 
 footer .list-inline {
@@ -394,24 +379,24 @@ footer .list-inline {
 }
 
 footer .copyright {
-  font-size: 0.875rem;
+  font-size: 14px;
   margin-bottom: 0;
   text-align: center;
 }
 
 .btn {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 800;
-  padding: 0.9375rem 1.5625rem;
-  letter-spacing: 0.0625rem;
+  padding: 15px 25px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .btn-primary {
-  background-color: #0175E4;
-  border-color: #0175E4;
+  background-color: #0085A1;
+  border-color: #0085A1;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -421,62 +406,6 @@ footer .copyright {
 }
 
 .btn-lg {
-  font-size: 1rem;
-  padding: 1.5625rem 2.1875rem;
+  font-size: 16px;
+  padding: 25px 35px;
 }
-
-.overlay-dark {
-  filter: brightness(10%);
-}
-
-.overlay-light {
-  filter: brightness(50%);
-}
-
-.collapse:not(.show) {
-  display: contents !important;
-}
-
-.nav-link {
-  margin: 0.15rem;
-}
-
-.nav-link:hover {
-  margin: 0.15rem;
-  text-decoration: underline !important;
-}
-
-.lien {
-  color: #01675A;
-  font-weight: bold;
-}
-
-.breadcrumb-item.active {
-  color: #565D64 !important;
-}
-
-@media only screen and (min-width: 62rem) {
-  #hamburger {
-    display: none !important;
-  }
-
-  #dropdown-menu {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 62rem) {
-  #myTopnav {
-    display: none !important;
-  }
-}
-
-#hamburger {
-  display: block;
-  float: right;
-}
-
-.header-buttons {
-  margin: 0.2rem;
-}
-
