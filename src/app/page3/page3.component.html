@@ -1,54 +1,58 @@
-
 <!-- Main Content -->
 <div class="container">
-  <form method="post" action="/">
+  <form #formulaire="ngForm" (ngSubmit)="onSubmit()">
     <p><small>Les champs obligatoires sont marqués par *</small></p>
     <!-- Civilité -->
-    <fieldset>
-      <legend>Civilité</legend>
-      <ul class="list-group list-group-horizontal">
-        <li class="list-group-item">
-          <input type="radio" name="civilite" id="civilite1" value="Mme" />
-          <label for="civilite1">&nbsp;&nbsp;Mme</label>
-        </li>
-        <li class="list-group-item">
-          <input type="radio" name="civilite" id="civilite2" value="M." />
-          <label for="civilite2"> &nbsp;&nbsp;M.</label>
-        </li>
-        <li class="list-group-item">
-          <input type="radio" name="civilite" id="civilite3" value="Autre" />
-          <label for="civilite3"> &nbsp;&nbsp;Autre</label>
-        </li>
-      </ul>
-    </fieldset>
-    <br />
+    <div class="form-group">
+      <fieldset>
+        <legend>Civilité</legend>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">
+            <input type="radio" name="civilite" id="civilite1" value="Mme" />
+            <label for="civilite1">&nbsp;&nbsp;Mme</label>
+          </li>
+          <li class="list-group-item">
+            <input type="radio" name="civilite" id="civilite2" value="M." />
+            <label for="civilite2"> &nbsp;&nbsp;M.</label>
+          </li>
+          <li class="list-group-item">
+            <input type="radio" name="civilite" id="civilite3" value="Autre" />
+            <label for="civilite3"> &nbsp;&nbsp;Autre</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
 
     <!-- Age -->
-    <label for="age"> Âge
-      <select class="form-control" name="age" id="age">
-        <option value="18">18</option>
-        <option value="19">19</option>
-        <option value="20">20</option>
-        <option value="21">21</option>
-      </select>
-    </label>
-    <br />
+    <div class="form-group">
+      <label for="age"> Âge
+        <select class="form-control" name="age" id="age">
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+        </select>
+      </label>
+    </div>
 
     <!-- Nom -->
-    <label for="nom" >
-      Nom *
-      <input class="form-control" type="text" id="nom" name="nom" required="required" />
-      <span id="erreurNom" style="color:#EE0700;">Veuillez renseigner votre nom</span>
-    </label>
-    <br />
+    <div class="form-group">
+      <label for="nom" >
+        Nom *
+        <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
+        <span *ngIf="showNameError" id="erreurNom" style="color:#EE0700;">Veuillez renseigner votre nom</span>
+      </label>
+    </div>
 
     <!-- Text -->
-    <label for="message" style="width: 50%">Votre message *
-      <textarea class="form-control" id="message" rows="5"></textarea>
-      <span id="erreurMessage" style="color:#EE0700;">Veuillez renseigner votre message</span>
-    </label>
-    <br />
-    <input class="btn btn-dark" type="submit" value="Envoyer" />
+    <div class="form-group">
+      <label for="message" style="width: 50%" required="required">Votre message *
+        <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message"></textarea>
+        <span *ngIf="showMessageError" id="erreurMessage" style="color:#EE0700;">Veuillez renseigner votre message</span>
+      </label>
+    </div>
+    <input class="btn btn-success" type="submit" value="Envoyer" />
+    <br/><span *ngIf="showSubmit" id="submitok" style="color:#058e00;">Vote message a été envoyé</span>
   </form>
 </div>
 

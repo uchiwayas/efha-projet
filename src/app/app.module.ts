@@ -9,6 +9,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { Page4Component } from './page4/page4.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { Page4Component } from './page4/page4.component';
     BrowserModule,
     FontAwesomeModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: '/index', pathMatch: 'full'},
-      { path: 'index', component: MainMenuComponent },
-      { path: 'page1', component: Page1Component },
-      { path: 'page2', component: Page2Component },
-      { path: 'page3', component: Page3Component },
-      { path: 'page4', component: Page4Component },
-      { path: '**', redirectTo: '/index', pathMatch: 'full'}
-    ])
+      {path: '', redirectTo: '/index', pathMatch: 'full'},
+      {path: 'index', component: MainMenuComponent},
+      {path: 'page1', component: Page1Component},
+      {path: 'page2', component: Page2Component},
+      {path: 'page3', component: Page3Component},
+      {path: 'page4', component: Page4Component},
+      {path: '**', redirectTo: '/index', pathMatch: 'full'}
+    ]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
