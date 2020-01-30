@@ -1,59 +1,69 @@
 <!-- Main Content -->
 <div class="container">
-  <form #formulaire="ngForm" (ngSubmit)="onSubmit()">
-    <p><small>Les champs obligatoires sont marqués par *</small></p>
-    <!-- Civilité -->
-    <div class="form-group">
-      <fieldset>
-        <legend>Civilité</legend>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item">
-            <input type="radio" name="civilite" id="civilite1" value="Mme" />
-            <label for="civilite1">&nbsp;&nbsp;Mme</label>
-          </li>
-          <li class="list-group-item">
-            <input type="radio" name="civilite" id="civilite2" value="M." />
-            <label for="civilite2"> &nbsp;&nbsp;M.</label>
-          </li>
-          <li class="list-group-item">
-            <input type="radio" name="civilite" id="civilite3" value="Autre" />
-            <label for="civilite3"> &nbsp;&nbsp;Autre</label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
+  <nav aria-label="fil d'ariane">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index" class="lien">Accueil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol>
+  </nav>
 
-    <!-- Age -->
-    <div class="form-group">
-      <label for="age"> Âge
-        <select class="form-control" name="age" id="age">
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-        </select>
-      </label>
-    </div>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <form #formulaire="ngForm" (ngSubmit)="onSubmit()">
+        <p><small>Les champs obligatoires sont marqués par *</small></p>
+        <!-- Civilité -->
+        <div class="form-group">
+          <fieldset>
+            <legend>Civilité</legend>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">
+                <input type="radio" name="civilite" id="civilite1" value="Mme" [attr.aria-checked]="radioValue === 'Mme' ? 'true': 'false'" (click)="changeRadio('Mme')" />
+                <label for="civilite1">&nbsp;&nbsp;Mme</label>
+              </li>
+              <li class="list-group-item">
+                <input type="radio" name="civilite" id="civilite2" value="M."  [attr.aria-checked]="radioValue === 'M.' ? 'true': 'false'" (click)="changeRadio('M.')" />
+                <label for="civilite2"> &nbsp;&nbsp;M.</label>
+              </li>
+              <li class="list-group-item">
+                <input type="radio" name="civilite" id="civilite3" value="Autre" [attr.aria-checked]="radioValue === 'Autre' ? 'true': 'false'" (click)="changeRadio('Autre')" />
+                <label for="civilite3"> &nbsp;&nbsp;Autre</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
-    <!-- Nom -->
-    <div class="form-group">
-      <label for="nom" >
-        Nom *
-        <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
-        <span *ngIf="showNameError" id="erreurNom" style="color:#EE0700;">Veuillez renseigner votre nom</span>
-      </label>
-    </div>
+        <!-- Age -->
+        <div class="form-group">
+          <label for="age"> Âge
+            <select class="form-control" name="age" id="age">
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+            </select>
+          </label>
+        </div>
 
-    <!-- Text -->
-    <div class="form-group">
-      <label for="message" style="width: 50%" required="required">Votre message *
-        <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message"></textarea>
-        <span *ngIf="showMessageError" id="erreurMessage" style="color:#EE0700;">Veuillez renseigner votre message</span>
-      </label>
+        <!-- Nom -->
+        <div class="form-group">
+          <label for="nom" >
+            Nom *
+            <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
+            <span *ngIf="showNameError" id="erreurNom" style="color:#EE0700;">Veuillez renseigner votre nom</span>
+          </label>
+        </div>
+
+        <!-- Text -->
+        <div class="form-group">
+          <label for="message" style="width: 100%" required="required">Votre message *
+            <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message"></textarea>
+            <span *ngIf="showMessageError" id="erreurMessage" style="color:#EE0700;">Veuillez renseigner votre message</span>
+          </label>
+        </div>
+        <input class="btn btn-success" type="submit" value="Envoyer" />
+        <br/><span *ngIf="showSubmit" id="submitok" style="color:#058e00;">Vote message a été envoyé</span>
+      </form>
     </div>
-    <input class="btn btn-success" type="submit" value="Envoyer" />
-    <br/><span *ngIf="showSubmit" id="submitok" style="color:#058e00;">Vote message a été envoyé</span>
-  </form>
+  </div>
 </div>
-
 <hr>

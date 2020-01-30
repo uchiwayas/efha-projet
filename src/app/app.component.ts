@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   overlayTypeGeneral = 'overlay-light';
   typeContraste = 'Mode contraste haut';
   pageName = 'index';
+  clickHamburger = false;
 
   ngOnInit(): void {
   }
@@ -47,5 +48,9 @@ export class AppComponent implements OnInit{
 
   isPageSelected(page) {
     return ((this.pageName) === '/' + page);
+  }
+
+  changeHamburger() {
+    this.clickHamburger = !this.clickHamburger;
   }
 }

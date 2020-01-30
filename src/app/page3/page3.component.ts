@@ -14,6 +14,7 @@ export class Page3Component implements OnInit {
   showSubmit = false;
   nom: string;
   message: string;
+  radioValue: string;
 
   public constructor(private titleService: Title, router: Router) {
   }
@@ -39,5 +40,9 @@ export class Page3Component implements OnInit {
     if (!this.showMessageError && !this.showNameError) {
       this.showSubmit = true;
     }
+  }
+
+  changeRadio(value) {
+    this.radioValue = value;
   }
 }
