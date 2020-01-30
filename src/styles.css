@@ -36,7 +36,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #0175E4;
+  color: #0168CB;
 }
 
 .evitement {
@@ -288,10 +288,17 @@ header.masthead .post-heading .meta a {
   font-size: 1.875rem;
   margin-top: 1.875rem;
   margin-bottom: 0.625rem;
+  color: #0056b3;
 }
 
-.post-preview > a > .post-subtitle {
-  font-weight: 300;
+.post-preview > a > .post-title:hover {
+  color: #0175E4;
+  text-decoration: underline !important;
+}
+
+
+.post-preview > .post-subtitle {
+  font-weight: 500;
   margin: 0 0 0.625rem;
 }
 
@@ -303,8 +310,11 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #212529;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-top: 0;
+  color: #6E7881;
+  text-decoration: underline !important;
 }
 
 .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
@@ -432,4 +442,18 @@ footer .copyright {
 
 .nav-link {
   margin: 0.15rem;
+}
+
+.nav-link:hover {
+  margin: 0.15rem;
+  text-decoration: underline !important;
+}
+
+.lien {
+  color: #01675A;
+  font-weight: bold;
+}
+
+.breadcrumb-item.active {
+  color: #565D64 !important;
 }

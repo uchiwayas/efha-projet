@@ -3,21 +3,20 @@ import {Title} from '@angular/platform-browser';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-page1',
-  templateUrl: './page1.component.html',
-  styleUrls: ['./page1.component.css']
+  selector: 'app-page4',
+  templateUrl: './page4.component.html',
+  styleUrls: ['./page4.component.css']
 })
-export class Page1Component implements OnInit {
+export class Page4Component implements OnInit {
 
   public constructor(private titleService: Title, router: Router) {
   }
 
   ngOnInit() {
-    this.setTitle('Handicap visuel - Game-Access');
+    this.setTitle('Plan du site - Game-Access');
   }
 
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
-
 }

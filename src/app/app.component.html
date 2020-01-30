@@ -11,41 +11,41 @@
 
         <!-- INDEX -->
         <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/index#h']" style="border-width: 0.1rem !important;">Accueil</a>
+          <a class="nav-link border border-light rounded" href="index" style="border-width: 0.1rem !important;">Accueil</a>
         </li>
         <ng-template #elseBlock0>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/index']">Accueil</a>
+            <a class="nav-link" href="index">Accueil</a>
           </li>
         </ng-template>
 
         <!-- PAGE 1 -->
         <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/page1']" style="border-width: 0.1rem !important;">Page 1</a>
+          <a class="nav-link border border-light rounded" href="page1" style="border-width: 0.1rem !important;">Handicap visuel</a>
         </li>
         <ng-template #elseBlock1>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/page1']">Page 1</a>
+            <a class="nav-link" href="page1">Handicap visuel</a>
           </li>
         </ng-template>
 
         <!-- PAGE 2 -->
         <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/page2']" style="border-width: 0.1rem !important;">Page 2</a>
+          <a class="nav-link border border-light rounded" href="page2" style="border-width: 0.1rem !important;">Handicap moteur</a>
         </li>
         <ng-template #elseBlock2>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/page2']">Page 2</a>
+            <a class="nav-link" href="page2">Handicap moteur</a>
           </li>
         </ng-template>
 
         <!-- PAGE 3 -->
         <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-          <a class="nav-link border border-light rounded" [routerLink]="['/page3']" style="border-width: 0.1rem !important;">Contact</a>
+          <a class="nav-link border border-light rounded" href="page3" style="border-width: 0.1rem !important;">Contact</a>
         </li>
         <ng-template #elseBlock3>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/page3']">Contact</a>
+            <a class="nav-link" href="page3">Contact</a>
           </li>
         </ng-template>
       </ul>
@@ -56,13 +56,41 @@
 </nav>
 
 <!-- Page Header -->
-  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/0.jpg'); background-repeat: no-repeat;"></div>
+  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
 
-  <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/1.jpg'); background-repeat: no-repeat;"></div>
+  <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
 
-  <div *ngIf="checkPage('page2')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/2.jpg'); background-repeat: no-repeat;"></div>
+  <div *ngIf="checkPage('page2')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
 
-  <div *ngIf="checkPage('page3')" class="overlay {{overlayTypeGeneral}}" style="background-image: url('assets/3.jpg'); background-repeat: no-repeat;"></div>
+  <div *ngIf="checkPage('page3')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
+
+  <div *ngIf="checkPage('page4')"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
+
 
   <div class="container">
     <div class="row">
@@ -75,15 +103,19 @@
         </div>
 
         <div *ngIf="checkPage('page1')" class="site-heading">
-          <h1>Page 1</h1>
+          <h1>L'accessibilité en situation de handicap visuel</h1>
         </div>
 
         <div *ngIf="checkPage('page2')" class="site-heading">
-          <h1>Page 2</h1>
+          <h1>L'accessibilité en situation de handicap moteur</h1>
         </div>
 
         <div *ngIf="checkPage('page3')" class="site-heading">
           <h1>Contact</h1>
+        </div>
+
+        <div *ngIf="checkPage('page4')" class="site-heading">
+          <h1>Plan du site</h1>
         </div>
 
       </div>
@@ -103,6 +135,10 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="clearfix">
+          <ul style="list-style: none; display: inline-block;">
+            <li><a href="/page3" class="lien">Nous contacter</a></li>
+            <li><a href="/page4" class="lien">Plan du site</a></li>
+          </ul>
           <button class="btn btn-dark float-right" (click)="changeContrast()">{{typeContraste}}</button>
         </div>
       </div>

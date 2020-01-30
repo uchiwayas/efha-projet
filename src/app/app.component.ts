@@ -7,12 +7,15 @@ import {Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'efha-projet';
   highContrast = false;
   overlayTypeGeneral = 'overlay-light';
   typeContraste = 'Mode contraste haut';
   pageName = 'index';
+
+  ngOnInit(): void {
+  }
 
   public constructor(private titleService: Title, private router: Router) {
     router.events.subscribe((val) => {
@@ -35,14 +38,11 @@ export class AppComponent {
 
   getPageName(): string {
     const fullName = this.pageName.split('#');
-    console.log(fullName[0]);
     return fullName[0];
   }
 
   checkPage(page) {
-    return (this.pageName === '/' + page ||
-            this.pageName === '/' + page + '#main' ||
-            this.pageName === '/' + page + '#footer');
+    return (this.pageName.split('#')[0] === '/' + page || this.pageName.split('?')[0] === '/' + page);
   }
 
   isPageSelected(page) {
