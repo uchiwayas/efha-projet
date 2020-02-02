@@ -182,6 +182,7 @@ header.masthead {
   background-attachment: scroll;
   position: relative;
   background-size: cover;
+  background: #212529
 }
 
 header.masthead .overlay {
@@ -479,3 +480,4 @@ footer .copyright {
 .header-buttons {
   margin: 0.2rem;
 }
+
