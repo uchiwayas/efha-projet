@@ -204,7 +204,7 @@ header.masthead .site-heading {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 12.5rem 0;
+  padding: 5rem 0;
 }
 
 header.masthead .page-heading,
@@ -231,7 +231,7 @@ header.masthead .site-heading .subheading {
 @media only screen and (min-width: 48rem) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 
