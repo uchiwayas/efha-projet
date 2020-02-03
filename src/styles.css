@@ -204,7 +204,8 @@ header.masthead .site-heading {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 5rem 0;
+  padding-bottom: 3rem;
+  padding-top: 7rem;
 }
 
 header.masthead .page-heading,

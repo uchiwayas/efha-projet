@@ -1,6 +1,6 @@
 <!-- Navigation -->
-<header class="masthead" style="background: #212529" role="banner">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<header class="masthead" role="banner">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" role="navigation">
     <div class="container">
       <a class="evitement btn btn-light" href="{{getPageName()}}#main"> Aller au contenu </a>
       <a class="evitement btn btn-light" href="{{getPageName()}}#footer"> Aller en bas de page </a>
@@ -12,7 +12,7 @@
 
           <!-- INDEX -->
           <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="index" style="border-width: 0.1rem !important;">Accueil</a>
+            <a aria-current="page" class="nav-link border border-light rounded" href="index">Accueil</a>
           </li>
           <ng-template #elseBlock0>
             <li class="nav-item">
@@ -22,7 +22,7 @@
 
           <!-- PAGE 1 -->
           <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page1" style="border-width: 0.1rem !important;">Handicap visuel</a>
+            <a aria-current="page" class="nav-link border border-light rounded" href="page1">Handicap visuel</a>
           </li>
           <ng-template #elseBlock1>
             <li class="nav-item">
@@ -32,7 +32,7 @@
 
           <!-- PAGE 2 -->
           <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page2" style="border-width: 0.1rem !important;">Handicap moteur</a>
+            <a aria-current="page" class="nav-link border border-light rounded" href="page2">Handicap moteur</a>
           </li>
           <ng-template #elseBlock2>
             <li class="nav-item">
@@ -42,7 +42,7 @@
 
           <!-- PAGE 3 -->
           <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page3" style="border-width: 0.1rem !important;">Contact</a>
+            <a aria-current="page" class="nav-link border border-light rounded" href="page3">Contact</a>
           </li>
           <ng-template #elseBlock3>
             <li class="nav-item">
@@ -51,10 +51,10 @@
           </ng-template>
         </ul>
         <div>
-          <button aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light header-buttons" (click)="changeContrast()" style="margin-left: 1rem">
+          <button type="button" aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light header-buttons" (click)="changeContrast()">
             <em class="fa fa-adjust"></em>
           </button>
-          <button class="btn btn-light header-buttons" id="hamburger" [attr.aria-label]="(clickHamburger? 'fermer':'ouvrir') + ' le menu de navigation'" (click)="changeHamburger()" >
+          <button type="button" class="btn btn-light header-buttons" id="hamburger" [attr.aria-label]="(clickHamburger? 'fermer':'ouvrir') + ' le menu de navigation'" (click)="changeHamburger()" >
             <em [attr.class]="clickHamburger? 'fa fa-times':'fa fa-bars'" aria-hidden="true"></em>
           </button>
         </div>
@@ -62,11 +62,10 @@
     </div>
 
     <div *ngIf="clickHamburger" class="container" id="dropdown-menu">
-      <ul class="navbar-nav ml-auto" style="background-color: dimgrey">
-
+      <ul class="navbar-nav ml-auto" id="dropdown-menu-liste">
         <!-- INDEX -->
         <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="index" style="border-width: 0.1rem !important;">Accueil</a>
+          <a aria-current="page" class="nav-link border border-light rounded" href="index">Accueil</a>
         </li>
         <ng-template #elseBlock0>
           <li class="nav-item">
@@ -76,7 +75,7 @@
 
         <!-- PAGE 1 -->
         <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page1" style="border-width: 0.1rem !important;">Handicap visuel</a>
+          <a aria-current="page" class="nav-link border border-light rounded" href="page1">Handicap visuel</a>
         </li>
         <ng-template #elseBlock1>
           <li class="nav-item">
@@ -86,7 +85,7 @@
 
         <!-- PAGE 2 -->
         <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page2" style="border-width: 0.1rem !important;">Handicap moteur</a>
+          <a aria-current="page" class="nav-link border border-light rounded" href="page2">Handicap moteur</a>
         </li>
         <ng-template #elseBlock2>
           <li class="nav-item">
@@ -96,7 +95,7 @@
 
         <!-- PAGE 3 -->
         <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page3" style="border-width: 0.1rem !important;">Contact</a>
+          <a aria-current="page" class="nav-link border border-light rounded" href="page3">Contact</a>
         </li>
         <ng-template #elseBlock3>
           <li class="nav-item">
@@ -188,11 +187,11 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="clearfix">
-          <ul style="list-style: none; display: inline-block;">
+          <ul id="footer-links">
             <li><a href="/page3" class="lien">Nous contacter</a></li>
             <li><a href="/page4" class="lien">Plan du site</a></li>
           </ul>
-          <button class="btn btn-dark float-right" (click)="changeContrast()">{{typeContraste}}</button>
+          <button type="button" class="btn btn-dark float-right" (click)="changeContrast()">{{typeContraste}}</button>
         </div>
       </div>
     </div>

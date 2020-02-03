@@ -13,7 +13,7 @@ export class Page2Component implements OnInit {
   }
 
   ngOnInit() {
-    this.setTitle('Handicap moteur - Game-Access');
+    this.setTitle('Handicap moteur | Game-Access');
   }
 
   public setTitle( newTitle: string) {

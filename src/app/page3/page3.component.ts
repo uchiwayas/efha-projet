@@ -20,7 +20,7 @@ export class Page3Component implements OnInit {
   }
 
   ngOnInit() {
-    this.setTitle('Contact - Game-Access');
+    this.setTitle('Contact | Game-Access');
   }
 
   public setTitle( newTitle: string) {

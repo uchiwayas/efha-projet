@@ -1,0 +1,20 @@
+.border-light {
+  border-width: 0.1rem !important;
+}
+
+.header-buttons {
+  margin-left: 1rem;
+}
+
+#dropdown-menu-liste {
+  background-color: dimgrey;
+}
+
+#footer-links {
+  list-style: none;
+  display: inline-block;
+}
+
+.masthead {
+  background: #212529;
+}
