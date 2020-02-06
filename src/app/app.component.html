@@ -108,11 +108,12 @@
   </nav>
 
   <!-- Page Header -->
-  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
+  <div *ngIf="checkPage('index') || this.pageName === undefined"  class="overlay {{overlayTypeGeneral}}"
+       style="background: url('assets/0.jpg') no-repeat center center fixed;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;">
   </div>
 
   <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/1.jpg') no-repeat center center fixed;

@@ -9,8 +9,8 @@
 
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <form #formulaire="ngForm" (ngSubmit)="onSubmit()">
-        <p><small>Les champs obligatoires sont marqués par *</small></p>
+      <form #formulaire="ngForm" (ngSubmit)="onSubmit()" action="#">
+        <p><small>Les champs obligatoires sont marqués par <span class="rouge">*</span></small></p>
         <!-- Civilité -->
         <div class="form-group">
           <fieldset>
@@ -47,21 +47,21 @@
         <!-- Nom -->
         <div class="form-group">
           <label for="nom" >
-            Nom *
+            Nom <span class="rouge">*</span>
             <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
-            <span *ngIf="showNameError" id="erreurNom" style="color:#EE0700;">Veuillez renseigner votre nom</span>
+            <span *ngIf="showNameError" id="erreurNom" class="rouge alerte">Veuillez renseigner votre nom</span>
           </label>
         </div>
 
         <!-- Text -->
         <div class="form-group">
-          <label for="message" style="width: 100%" required="required">Votre message *
+          <label for="message" id="messageLabel" required="required">Votre message <span class="rouge">*</span>
             <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message"></textarea>
-            <span *ngIf="showMessageError" id="erreurMessage" style="color:#EE0700;">Veuillez renseigner votre message</span>
+            <span *ngIf="showMessageError" id="erreurMessage" class="rouge alerte">Veuillez renseigner votre message</span>
           </label>
         </div>
         <input class="btn btn-success" type="submit" value="Envoyer le message" />
-        <br/><span *ngIf="showSubmit" id="submitok" style="color:#058e00;">Vote message a été envoyé</span>
+        <br/><span *ngIf="showSubmit" id="submitok" class="vert alerte">Vote message a été envoyé</span>
       </form>
     </div>
   </div>

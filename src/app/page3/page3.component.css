@@ -1,0 +1,15 @@
+#messageLabel {
+  width: 100%;
+}
+
+.alerte {
+  padding: 0.2rem;
+}
+
+.rouge {
+  color:#EE0700;
+}
+
+.vert {
+  color:#058e00;
+}
