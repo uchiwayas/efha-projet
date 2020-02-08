@@ -14,7 +14,7 @@
         <!-- Civilité -->
         <div class="form-group">
           <fieldset>
-            <legend>Civilité</legend>
+            <legend class="texte-form">Civilité</legend>
             <ul class="list-group list-group-horizontal">
               <li class="list-group-item">
                 <input type="radio" name="civilite" id="civilite1" value="Mme" [attr.aria-checked]="radioValue === 'Mme' ? 'true': 'false'" (click)="changeRadio('Mme')" />
@@ -34,7 +34,7 @@
 
         <!-- Age -->
         <div class="form-group">
-          <label for="age"> Âge
+          <label for="age"> <span class="texte-form">Âge</span>
             <select class="form-control" name="age" id="age">
               <option value="18">18</option>
               <option value="19">19</option>
@@ -47,21 +47,23 @@
         <!-- Nom -->
         <div class="form-group">
           <label for="nom" >
-            Nom <span class="rouge">*</span>
+            <span class="texte-form">Nom <span class="rouge">*</span></span>
             <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
-            <span *ngIf="showNameError" id="erreurNom" class="rouge alerte">Veuillez renseigner votre nom</span>
+            <span *ngIf="showNameError" class="sr-only">Veuillez renseigner votre nom</span>
+            <span *ngIf="showNameError" id="erreurNom" class="rouge alerte" role="alert">Veuillez renseigner votre nom</span>
           </label>
         </div>
 
         <!-- Text -->
         <div class="form-group">
-          <label for="message" id="messageLabel" required="required">Votre message <span class="rouge">*</span>
-            <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message"></textarea>
-            <span *ngIf="showMessageError" id="erreurMessage" class="rouge alerte">Veuillez renseigner votre message</span>
+          <label for="message" id="messageLabel" required="required"><span class="texte-form">Votre message <span class="rouge">*</span></span>
+            <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message" required="required"></textarea>
+            <span *ngIf="showMessageError" class="sr-only">Veuillez renseigner votre message</span>
+            <span *ngIf="showMessageError" id="erreurMessage" class="rouge alerte" role="alert">Veuillez renseigner votre message</span>
           </label>
         </div>
         <input class="btn btn-success" type="submit" value="Envoyer le message" />
-        <br/><span *ngIf="showSubmit" id="submitok" class="vert alerte">Vote message a été envoyé</span>
+        <br/><span *ngIf="showSubmit" id="submitok" class="vert alerte" role="alert">Vote message a été envoyé</span>
       </form>
     </div>
   </div>

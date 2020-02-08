@@ -482,3 +482,14 @@ footer .copyright {
   margin: 0.2rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.contenu {
+  font-weight: 500;
+}
