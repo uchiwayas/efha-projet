@@ -1,16 +1,17 @@
 <!-- Navigation -->
 <header class="masthead" role="banner">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" role="navigation">
-    <div class="container">
+    <div>
       <a class="evitement btn btn-light" href="{{getPageName()}}#main"> Aller au contenu </a>
       <a class="evitement btn btn-light" href="{{getPageName()}}#footer"> Aller en bas de page </a>
+    </div>
+    <div class="container">
       <a class="navbar-brand" href="index.html">Game-Access</a>
-
-
       <div class="collapse navbar-collapse topnav">
         <ul class="navbar-nav ml-auto" id="myTopnav">
 
           <!-- INDEX -->
+
           <li *ngIf="isPageSelected('index') as value; else elseBlock0" class="nav-item">
             <a aria-current="page" class="nav-link border border-light rounded" href="index">Accueil</a>
           </li>
@@ -40,6 +41,16 @@
             </li>
           </ng-template>
 
+
+          <li *ngIf="isPageSelected('page5') as value; else elseBlock5" class="nav-item">
+            <a aria-current="page" class="nav-link border border-light rounded" href="index">Handicap auditif</a>
+          </li>
+          <ng-template #elseBlock5>
+            <li class="nav-item">
+              <a class="nav-link" href="page5">Handicap auditif</a>
+            </li>
+          </ng-template>
+
           <!-- PAGE 3 -->
           <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
             <a aria-current="page" class="nav-link border border-light rounded" href="page3">Contact</a>
@@ -49,7 +60,10 @@
               <a class="nav-link" href="page3">Contact</a>
             </li>
           </ng-template>
+
         </ul>
+
+
         <div>
           <button type="button" aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light header-buttons" (click)="changeContrast()">
             <em class="fa fa-adjust"></em>
@@ -90,6 +104,16 @@
         <ng-template #elseBlock2>
           <li class="nav-item">
             <a class="nav-link" href="page2">Handicap moteur</a>
+          </li>
+        </ng-template>
+
+        <!-- PAGE 5 -->
+        <li *ngIf="isPageSelected('page5') as value; else elseBlock5" class="nav-item">
+          <a aria-current="page" class="nav-link border border-light rounded" href="page5">Handicap auditif</a>
+        </li>
+        <ng-template #elseBlock5>
+          <li class="nav-item">
+            <a class="nav-link" href="page5">Handicap auditif</a>
           </li>
         </ng-template>
 
@@ -137,6 +161,13 @@
   background-size: cover;">
   </div>
 
+  <div *ngIf="checkPage('page5')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  </div>
+
   <div *ngIf="checkPage('page4')"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -169,6 +200,10 @@
 
         <div *ngIf="checkPage('page4')" class="site-heading">
           <h1>Plan du site</h1>
+        </div>
+
+        <div *ngIf="checkPage('page5')" class="site-heading">
+          <h1>L'accessibilité en situation de handicap auditif</h1>
         </div>
 
       </div>
