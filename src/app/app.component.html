@@ -21,43 +21,43 @@
             </li>
           </ng-template>
 
-          <!-- PAGE 1 -->
-          <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page1">Handicap visuel</a>
-          </li>
-          <ng-template #elseBlock1>
-            <li class="nav-item">
-              <a class="nav-link" href="page1">Handicap visuel</a>
-            </li>
-          </ng-template>
-
-          <!-- PAGE 2 -->
-          <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page2">Handicap moteur</a>
-          </li>
-          <ng-template #elseBlock2>
-            <li class="nav-item">
-              <a class="nav-link" href="page2">Handicap moteur</a>
-            </li>
-          </ng-template>
-
-
-          <li *ngIf="isPageSelected('page5') as value; else elseBlock5" class="nav-item">
+          <li *ngIf="isPageSelected('handicap-auditif') as value; else elseBlock5" class="nav-item">
             <a aria-current="page" class="nav-link border border-light rounded" href="index">Handicap auditif</a>
           </li>
           <ng-template #elseBlock5>
             <li class="nav-item">
-              <a class="nav-link" href="page5">Handicap auditif</a>
+              <a class="nav-link" href="handicap-auditif">Handicap auditif</a>
             </li>
           </ng-template>
 
+          <!-- PAGE 1 -->
+          <li *ngIf="isPageSelected('handicap-visuel') as value; else elseBlock1" class="nav-item">
+            <a aria-current="page" class="nav-link border border-light rounded" href="handicap-visuel">Handicap visuel</a>
+          </li>
+          <ng-template #elseBlock1>
+            <li class="nav-item">
+              <a class="nav-link" href="handicap-visuel">Handicap visuel</a>
+            </li>
+          </ng-template>
+
+          <!-- PAGE 2 -->
+          <li *ngIf="isPageSelected('handicap-moteur') as value; else elseBlock2" class="nav-item">
+            <a aria-current="page" class="nav-link border border-light rounded" href="handicap-moteur">Handicap moteur</a>
+          </li>
+          <ng-template #elseBlock2>
+            <li class="nav-item">
+              <a class="nav-link" href="handicap-moteur">Handicap moteur</a>
+            </li>
+          </ng-template>
+
+
           <!-- PAGE 3 -->
-          <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-            <a aria-current="page" class="nav-link border border-light rounded" href="page3">Contact</a>
+          <li *ngIf="isPageSelected('page-contact') as value; else elseBlock3" class="nav-item">
+            <a aria-current="page" class="nav-link border border-light rounded" href="page-contact">Contact</a>
           </li>
           <ng-template #elseBlock3>
             <li class="nav-item">
-              <a class="nav-link" href="page3">Contact</a>
+              <a class="nav-link" href="page-contact">Contact</a>
             </li>
           </ng-template>
 
@@ -87,43 +87,43 @@
           </li>
         </ng-template>
 
+        <!-- PAGE 5 -->
+        <li *ngIf="isPageSelected('handicap-auditif') as value; else elseBlock5" class="nav-item">
+          <a aria-current="page" class="nav-link border border-light rounded" href="handicap-auditif">Handicap auditif</a>
+        </li>
+        <ng-template #elseBlock5>
+          <li class="nav-item">
+            <a class="nav-link" href="handicap-auditif">Handicap auditif</a>
+          </li>
+        </ng-template>
+
         <!-- PAGE 1 -->
-        <li *ngIf="isPageSelected('page1') as value; else elseBlock1" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page1">Handicap visuel</a>
+        <li *ngIf="isPageSelected('handicap-visuel') as value; else elseBlock1" class="nav-item">
+          <a aria-current="page" class="nav-link border border-light rounded" href="handicap-visuel">Handicap visuel</a>
         </li>
         <ng-template #elseBlock1>
           <li class="nav-item">
-            <a class="nav-link" href="page1">Handicap visuel</a>
+            <a class="nav-link" href="handicap-visuel">Handicap visuel</a>
           </li>
         </ng-template>
 
         <!-- PAGE 2 -->
-        <li *ngIf="isPageSelected('page2') as value; else elseBlock2" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page2">Handicap moteur</a>
+        <li *ngIf="isPageSelected('handicap-moteur') as value; else elseBlock2" class="nav-item">
+          <a aria-current="page" class="nav-link border border-light rounded" href="handicap-moteur">Handicap moteur</a>
         </li>
         <ng-template #elseBlock2>
           <li class="nav-item">
-            <a class="nav-link" href="page2">Handicap moteur</a>
-          </li>
-        </ng-template>
-
-        <!-- PAGE 5 -->
-        <li *ngIf="isPageSelected('page5') as value; else elseBlock5" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page5">Handicap auditif</a>
-        </li>
-        <ng-template #elseBlock5>
-          <li class="nav-item">
-            <a class="nav-link" href="page5">Handicap auditif</a>
+            <a class="nav-link" href="handicap-moteur">Handicap moteur</a>
           </li>
         </ng-template>
 
         <!-- PAGE 3 -->
-        <li *ngIf="isPageSelected('page3') as value; else elseBlock3" class="nav-item">
-          <a aria-current="page" class="nav-link border border-light rounded" href="page3">Contact</a>
+        <li *ngIf="isPageSelected('page-contact') as value; else elseBlock3" class="nav-item">
+          <a aria-current="page" class="nav-link border border-light rounded" href="page-contact">Contact</a>
         </li>
         <ng-template #elseBlock3>
           <li class="nav-item">
-            <a class="nav-link" href="page3">Contact</a>
+            <a class="nav-link" href="page-contact">Contact</a>
           </li>
         </ng-template>
       </ul>
@@ -140,35 +140,35 @@
               background-size: cover;">
   </div>
 
-  <div *ngIf="checkPage('page1')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/1.jpg') no-repeat center center fixed;
+  <div *ngIf="checkPage('handicap-auditif')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
   </div>
 
-  <div *ngIf="checkPage('page2')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/2.jpg') no-repeat center center fixed;
+  <div *ngIf="checkPage('handicap-visuel')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
   </div>
 
-  <div *ngIf="checkPage('page3')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/3.jpg') no-repeat center center fixed;
+  <div *ngIf="checkPage('handicap-moteur')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
   </div>
 
-  <div *ngIf="checkPage('page5')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/2.jpg') no-repeat center center fixed;
+  <div *ngIf="checkPage('page-contact')" class="overlay {{overlayTypeGeneral}}" style="background: url('assets/4.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;">
   </div>
 
-  <div *ngIf="checkPage('page4')"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
+  <div *ngIf="checkPage('plan-du-site')"  class="overlay {{overlayTypeGeneral}}" style="background: url('assets/0.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -186,23 +186,23 @@
           <span class="subheading">TAHRI Yassine & ANGELINA Sacha</span>
         </div>
 
-        <div *ngIf="checkPage('page1')" class="site-heading">
+        <div *ngIf="checkPage('handicap-visuel')" class="site-heading">
           <h1>L'accessibilité en situation de handicap visuel</h1>
         </div>
 
-        <div *ngIf="checkPage('page2')" class="site-heading">
+        <div *ngIf="checkPage('handicap-moteur')" class="site-heading">
           <h1>L'accessibilité en situation de handicap moteur</h1>
         </div>
 
-        <div *ngIf="checkPage('page3')" class="site-heading">
+        <div *ngIf="checkPage('page-contact')" class="site-heading">
           <h1>Contact</h1>
         </div>
 
-        <div *ngIf="checkPage('page4')" class="site-heading">
+        <div *ngIf="checkPage('plan-du-site')" class="site-heading">
           <h1>Plan du site</h1>
         </div>
 
-        <div *ngIf="checkPage('page5')" class="site-heading">
+        <div *ngIf="checkPage('handicap-auditif')" class="site-heading">
           <h1>L'accessibilité en situation de handicap auditif</h1>
         </div>
 
@@ -218,17 +218,18 @@
 
 <!-- Footer -->
 <a id="footer" tabindex="-1"></a>
-<footer role="contentinfo">
+<footer role="contentinfo" id="content-info">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="clearfix">
           <ul id="footer-links">
-            <li><a href="/page3" class="lien">Nous contacter</a></li>
-            <li><a href="/page4" class="lien">Plan du site</a></li>
+            <li><a href="/page-contact" class="lien">Nous contacter</a></li>
+            <li><a href="/plan-du-site" class="lien">Plan du site</a></li>
           </ul>
-          <button type="button" class="btn btn-dark float-right" (click)="changeContrast()">{{typeContraste}}</button>
+          <button type="button" class="btn btn-light float-right" id="footer-button" (click)="changeContrast()">{{typeContraste}}</button>
         </div>
+        <p class="foot-text text-light">Projet d'accessibilité numérique - TAHRI Yassine & ANGELINA Sacha</p>
       </div>
     </div>
   </div>

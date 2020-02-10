@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 
+
+html {
+  background: #1b1f25;
+}
+
+
 body {
   font-size: 1.25rem;
   color: #212529;
@@ -387,7 +393,7 @@ form .form-group:first-child .floating-label-form-group {
 }
 
 footer {
-  padding: 3.125rem 0 4.0625rem;
+  padding: 3.125rem 0 2rem;
 }
 
 footer .list-inline {
@@ -395,10 +401,11 @@ footer .list-inline {
   padding: 0;
 }
 
-footer .copyright {
+footer .foot-text {
   font-size: 0.875rem;
   margin-bottom: 0;
   text-align: center;
+  padding-top: 3rem;
 }
 
 .btn {
