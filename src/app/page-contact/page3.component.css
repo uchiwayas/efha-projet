@@ -25,3 +25,7 @@ h3 {
   font-size: medium;
   font-weight: 500;
 }
+
+.list-group-item {
+  border: none;
+}
