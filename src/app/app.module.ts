@@ -9,7 +9,7 @@ import { Page1Component } from './handicap-visuel/page1.component';
 import { Page2Component } from './handicap-moteur/page2.component';
 import { Page3Component } from './page-contact/page3.component';
 import { Page4Component } from './plan-du-site/page4.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
 import { Page5Component } from './handicap-auditif/page5.component';
 
 @NgModule({
