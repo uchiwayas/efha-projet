@@ -46,7 +46,7 @@
             <span class="texte-form">Nom <span class="rouge">*</span></span>
             <input class="form-control" type="text" id="nom" name="nom" required="required" [(ngModel)]="nom"/>
             <span *ngIf="showNameError" class="sr-only">Veuillez renseigner votre nom</span>
-            <span *ngIf="showNameError" id="erreurNom" class="rouge alerte" role="alert">Veuillez renseigner votre nom</span>
+            <span *ngIf="showNameError" id="erreurNom" class="rouge alerte" aria-live="polite">Veuillez renseigner votre nom</span>
           </label>
         </div>
 
@@ -55,7 +55,7 @@
           <label for="message" id="messageLabel" required="required"><span class="texte-form">Votre message <span class="rouge">*</span></span>
             <textarea class="form-control" id="message" rows="5" name="message" [(ngModel)]="message" required="required"></textarea>
             <span *ngIf="showMessageError" class="sr-only">Veuillez renseigner votre message</span>
-            <span *ngIf="showMessageError" id="erreurMessage" class="rouge alerte" role="alert">Veuillez renseigner votre message</span>
+            <span *ngIf="showMessageError" id="erreurMessage" class="rouge alerte" aria-live="polite">Veuillez renseigner votre message</span>
           </label>
         </div>
         <input class="btn btn-success" type="submit" value="Envoyer le message" />

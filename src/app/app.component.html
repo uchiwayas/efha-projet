@@ -68,7 +68,7 @@
           <button type="button" aria-label="Changer le mode de contraste" alt="Changer le mode de contraste" class="btn btn-light header-buttons" (click)="changeContrast()">
             <em class="fa fa-adjust"></em>
           </button>
-          <button type="button" class="btn btn-light header-buttons" id="hamburger" [attr.aria-label]="(clickHamburger? 'fermer':'ouvrir') + ' le menu de navigation'" (click)="changeHamburger()" >
+          <button [attr.aria-expanded]="clickHamburger? true: false" type="button" class="btn btn-light header-buttons" id="hamburger" [attr.aria-label]="(clickHamburger? 'fermer':'ouvrir') + ' le menu de navigation'" (click)="changeHamburger()" >
             <em [attr.class]="clickHamburger? 'fa fa-times':'fa fa-bars'" aria-hidden="true"></em>
           </button>
         </div>
